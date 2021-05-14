@@ -79,8 +79,16 @@ The largest turnout was in Denver county with a turnout of 306,055 votes (82.8 %
     - Raymon Anthony Doane received 3.1 % of the vote and 11,606 number of votes.
     - 
 - The winner of the election based on popular vote was:
-    - Diana DeGette who reeieved 73.8 % of the vote and 272,892 number of votes.
+    - Diana DeGette who recieved 73.8 % of the vote and 272,892 number of votes.
 
-## Challenge Overview
+## Summary
+### Business Proposal for timely analysis and presentation of voting results.
 
-## Challenge Summary
+In any election the aggregation of voting data and an accurate analysis to present the results in a timely manner is critical.
+This script automates the analysis of the raw data to quickly compile the results by candidates and precincts. It can be applied to any popular voting data with any number of candidates and / or precincts
+
+Furthermore, the script can be modified to detect voter fraud committed by multiple votes casted by a single person / ballot ID. This can be done by checking if repetitions of Ballot ID are present.
+
+Lastly - this scipt can also be modified to compbine external data sources, such as voter demographics, associated with each ballot ID to spot voting trends and preferences. An example would be to investigate if any correlation exists between religious beliefs of the voters and their preference to any particular candidate.  
+
+
