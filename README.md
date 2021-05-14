@@ -19,6 +19,61 @@ An election audit of a recent local congressional election has been completed fo
 
 ## Election-Audit Results
 
+### Short overview of method
+First the analysis was performed to generate the results for each candidate. Candidate names were stored in an array list, "candidate_options".
+The votes that each candidate received were stored in a dictionary, "candidate_votes", where each candidates names corresponded to the votes he/she received. The candidate receiving the maximum number of votes was declared to be the winner. 
+Identical analysis was performed to generate the results for each county, and to declare the county with the maximum voter turnout.
+
+For reference, below is a part of the script that analyses the data on the candidates:
+```
+# For each row in the CSV file.
+    for row in reader:
+
+        # Add to the total vote count
+        total_votes = total_votes + 1
+
+        # Get the candidate name from each row.
+        candidate_name = row[2]
+
+        # 3: Extract the county name from each row.
+        county_name = row[1]
+
+        # If the candidate does not match any existing candidate add it to
+        # the candidate list
+        if candidate_name not in candidate_options:
+
+            # Add the candidate name to the candidate list.
+            candidate_options.append(candidate_name)
+
+            # And begin tracking that candidate's voter count.
+            candidate_votes[candidate_name] = 0
+
+        # Add a vote to that candidate's count
+        candidate_votes[candidate_name] += 1
+```
+The analysis to find the winning candidate, based on the popular vote, was done in the following lines of code:
+```
+ for candidate_name in candidate_votes:
+
+        # Retrieve vote count and percentage
+        votes = candidate_votes.get(candidate_name)
+        vote_percentage = float(votes) / float(total_votes) * 100
+        candidate_results = (
+            f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+
+        # Print each candidate's voter count and percentage to the
+        # terminal.
+        print(candidate_results)
+        #  Save the candidate results to our text file.
+        txt_file.write(candidate_results)
+
+        # Determine winning vote count, winning percentage, and candidate.
+        if (votes > winning_count) and (vote_percentage > winning_percentage):
+            winning_count = votes
+            winning_candidate = candidate_name
+            winning_percentage = vote_percentage
+```
+
 The following was the output in the terminal.
 ```
 Election Results
