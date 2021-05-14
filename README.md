@@ -8,7 +8,7 @@ An election audit of a recent local congressional election has been completed fo
 3. The voter turnout for each county.
 4. The percentage of votes from each county out of the total count.
 5. The county with the highest turnout.
-6. A complete list of candidates who recieves votes.
+6. A complete list of candidates who receives votes.
 7. Total number of votes that each candidate received.
 8. The percentage of votes each candidate won.
 9. Winner of the election based on the popular vote.
@@ -21,10 +21,10 @@ An election audit of a recent local congressional election has been completed fo
 
 ### Short overview of method
 First the analysis was performed to generate the results for each candidate. Candidate names were stored in an array list, "candidate_options".
-The votes that each candidate received were stored in a dictionary, "candidate_votes", where each candidates names corresponded to the votes he/she received. The candidate receiving the maximum number of votes was declared to be the winner. 
+The votes that each candidate received were stored in a dictionary, "candidate_votes", where each candidates' names corresponded to the votes he/she received. The candidate receiving the maximum number of votes was declared to be the winner. 
 Identical analysis was performed to generate the results for each county, and to declare the county with the maximum voter turnout.
 
-For reference, below is a part of the script that analyses the data on the candidates:
+For reference, below is a part of the script that analyzes the data on the candidates:
 ```
 # For each row in the CSV file.
     for row in reader:
@@ -51,7 +51,7 @@ For reference, below is a part of the script that analyses the data on the candi
         # Add a vote to that candidate's count
         candidate_votes[candidate_name] += 1
 ```
-The analysis to find the winning candidate, based on the popular vote, was done in the following lines of code:
+The analyses to find the winning candidate, based on the popular vote, were done in the following lines of code:
 ```
  for candidate_name in candidate_votes:
 
@@ -74,7 +74,7 @@ The analysis to find the winning candidate, based on the popular vote, was done 
             winning_percentage = vote_percentage
 ```
 
-The following was the output in the terminal.
+The following were the output in the terminal:
 ```
 Election Results
 -------------------------
@@ -106,7 +106,7 @@ Winning Percentage: 73.8%
 -------------------------
 ```
 
-The analysis of the election show the following :
+The analyses of the election show the following :
 - There were 369,711 votes cast in this election.
 
 ### County Results
@@ -127,23 +127,23 @@ The largest turnout was in Denver county with a turnout of 306,055 votes (82.8 %
     - Charles Casper Stockham
     - Diana DeGette
     - Raymon Anthony Doane
-    -
+    
 - The Candidate results were :
     - Charles Casper Stockham received 23.0 % of the vote and 85,213 number of votes.
     - Diana DeGette received 73.8 % of the vote and 272,892 number of votes.
     - Raymon Anthony Doane received 3.1 % of the vote and 11,606 number of votes.
-    - 
+    
 - The winner of the election based on popular vote was:
-    - Diana DeGette who recieved 73.8 % of the vote and 272,892 number of votes.
+    - Diana DeGette who received 73.8 % of the vote and 272,892 number of votes.
 
 ## Summary
 ### Business Proposal for timely analysis and presentation of voting results.
 
-In any election the aggregation of voting data and an accurate analysis to present the results in a timely manner is critical.
-This script automates the analysis of the raw data to quickly compile the results by candidates and precincts. It can be applied to any popular voting data with any number of candidates and / or precincts
+In any election the aggregation of voting data, and an accurate analyses to present the results in a timely manner, is critical.
+This script automates the analyses of the raw data to quickly compile the results by candidates and precincts. It can be applied to any voting data with any number of candidates and / or precincts
 
 Furthermore, the script can be modified to detect voter fraud committed by multiple votes casted by a single person / ballot ID. This can be done by checking if repetitions of Ballot ID are present.
 
-Lastly - this scipt can also be modified to compbine external data sources, such as voter demographics, associated with each ballot ID to spot voting trends and preferences. An example would be to investigate if any correlation exists between religious beliefs of the voters and their preference to any particular candidate.  
+Lastly, this scipt can also be modified to combine external data sources, such as voter demographics, associated with each ballot ID to spot voting trends and preferences. An example would be to investigate if any correlation exists between religious beliefs of the voters and their preference for any particular candidate.  
 
 
