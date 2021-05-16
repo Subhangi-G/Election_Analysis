@@ -21,7 +21,7 @@ An election audit of a recent local congressional election has been completed fo
 
 ### Short overview of method
 First the analysis was performed to generate the results for each candidate. Candidate names were stored in an array list, "candidate_options".
-The votes that each candidate received were stored in a dictionary, "candidate_votes", where each candidates' names corresponded to the votes he/she received. The candidate receiving the maximum number of votes was declared to be the winner./ 
+The votes that each candidate received were stored in a dictionary, "candidate_votes", where each candidates' names corresponded to the votes he/she received. The candidate receiving the maximum number of votes was declared to be the winner.\
 Identical analysis was performed to generate the results for each county, and to declare the county with the maximum voter turnout.
 
 For reference, below is a part of the script that analyzes the data on the candidates:
