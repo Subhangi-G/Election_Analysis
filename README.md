@@ -144,6 +144,6 @@ This script automates the analyses of the raw data to quickly compile the result
 
 Furthermore, the script can be modified to detect voter fraud committed by multiple votes casted by a single person / ballot ID. This can be done by checking if repetitions of Ballot ID are present.
 
-Lastly, this script can also be modified to combine external data sources, such as voter demographics, associated with each ballot ID to spot voting trends and preferences. An example would be to investigate if any correlation exists between religious beliefs of the voters and their preference for any particular candidate.  
+Lastly, this script can also be modified to combine external data sources, such as voter demographics, associated with each ballot ID to spot voting trends and preferences. An example would be to investigate if any correlation exists between the income ranges of the voters and their preference for any particular candidate.  
 
 
