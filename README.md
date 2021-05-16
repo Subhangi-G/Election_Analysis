@@ -21,7 +21,7 @@ An election audit of a recent local congressional election has been completed fo
 
 ### Short overview of method
 First the analysis was performed to generate the results for each candidate. Candidate names were stored in an array list, "candidate_options".
-The votes that each candidate received were stored in a dictionary, "candidate_votes", where each candidates' names corresponded to the votes he/she received. The candidate receiving the maximum number of votes was declared to be the winner. 
+The votes that each candidate received were stored in a dictionary, "candidate_votes", where each candidates' names corresponded to the votes he/she received. The candidate receiving the maximum number of votes was declared to be the winner./ 
 Identical analysis was performed to generate the results for each county, and to declare the county with the maximum voter turnout.
 
 For reference, below is a part of the script that analyzes the data on the candidates:
@@ -144,6 +144,6 @@ This script automates the analyses of the raw data to quickly compile the result
 
 Furthermore, the script can be modified to detect voter fraud committed by multiple votes casted by a single person / ballot ID. This can be done by checking if repetitions of Ballot ID are present.
 
-Lastly, this scipt can also be modified to combine external data sources, such as voter demographics, associated with each ballot ID to spot voting trends and preferences. An example would be to investigate if any correlation exists between religious beliefs of the voters and their preference for any particular candidate.  
+Lastly, this script can also be modified to combine external data sources, such as voter demographics, associated with each ballot ID to spot voting trends and preferences. An example would be to investigate if any correlation exists between religious beliefs of the voters and their preference for any particular candidate.  
 
 
