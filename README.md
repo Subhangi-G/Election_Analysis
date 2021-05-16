@@ -51,7 +51,7 @@ For reference, below is a part of the script that analyzes the data on the candi
         # Add a vote to that candidate's count
         candidate_votes[candidate_name] += 1
 ```
-The analyses to find the winning candidate, based on the popular vote, were done in the following lines of code:
+The analysis to find the winning candidate, based on the popular vote, were done in the following lines of code:
 ```
  for candidate_name in candidate_votes:
 
